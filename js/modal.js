@@ -1,11 +1,13 @@
-const modalButton = document.querySelector(".more"); // Кнопка - узнать больше
+const modalButtons = document.querySelectorAll(".more"); // Кнопки - узнать больше
 const modal = document.querySelector(".modal"); // Блок с модальной формой
 const overlay = modal.querySelector(".overlay");
 const modalClose = modal.querySelector(".modal__close"); // Крестик в модальной форме
 
 // Открыть модальную форму при клике на кнопку - Узнать больше
-modalButton.addEventListener("click", () => {
-    modal.classList.remove("hidden");
+modalButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+    });
 });
 
 // Закрыть форму при клике вне самой формы
